@@ -21,7 +21,6 @@ pub fn process_instruction(
     let seeds = &[user_acc.key.as_ref(), b"user"];
     let (pda_public_key, bump) = Pubkey::find_program_address(seeds, program_id);
 
-
     let ix = create_account(
         user_acc.key,
         pda.key,
